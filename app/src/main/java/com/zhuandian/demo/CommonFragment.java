@@ -1,6 +1,7 @@
 package com.zhuandian.demo;
 
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -62,11 +63,12 @@ public class CommonFragment extends LazyLoadFragment {
     private void initView() {
         tvPagerName.setText(pagerName);
         for (int i = 0; i < 25; i++) {
-            datas.add("name------" + i);
+            datas.add("---" + i);
         }
 
         rvList.setAdapter(new DataAdapter(getContext(), datas));
         rvList.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         convenientBanner.setPages(
                 new CBViewHolderCreator<LocalImageHolderView>() {
                     @Override
