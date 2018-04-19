@@ -26,8 +26,19 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.gyf.barlibrary:barlibrary:2.3.0'
     implementation 'com.android.support:design:26.0.0-alpha1'
+
+
+
     //小刀注解框架
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.bigkoo:convenientbanner:2.0.5'
+
+
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
+
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }

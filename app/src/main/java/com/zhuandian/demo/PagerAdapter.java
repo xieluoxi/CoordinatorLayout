@@ -7,12 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-/**
- * desc :
- * author：xiedong
- * data：2018/4/16
- */
-
 public class PagerAdapter extends FragmentPagerAdapter {
     private List<CommonFragment> fragmentList;
     private List<String> titles;
@@ -26,6 +20,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         return fragmentList.get(position);
+
     }
 
     @Override

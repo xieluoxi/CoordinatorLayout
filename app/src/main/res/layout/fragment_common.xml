@@ -6,19 +6,26 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <com.bigkoo.convenientbanner.ConvenientBanner
-        android:id="@+id/convenientBanner"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:canLoop="true" />
+    <!--<com.bigkoo.convenientbanner.ConvenientBanner-->
+        <!--android:id="@+id/convenientBanner"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--app:canLoop="true" />-->
 
     <TextView
         android:id="@+id/tv_pager_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_list"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/gank_swipe_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </LinearLayout>

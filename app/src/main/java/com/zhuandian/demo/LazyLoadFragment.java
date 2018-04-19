@@ -11,11 +11,6 @@ import android.widget.Toast;
 
 import butterknife.ButterKnife;
 
-/**
- * desc :
- * author：xiedong
- * data：2018/4/16
- */
 
 public abstract class LazyLoadFragment extends Fragment {
     /**
@@ -35,6 +30,7 @@ public abstract class LazyLoadFragment extends Fragment {
         /**初始化的时候去加载数据**/
         isCanLoadData();
         return view;
+
     }
 
     /**

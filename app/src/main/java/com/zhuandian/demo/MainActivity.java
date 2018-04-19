@@ -1,5 +1,6 @@
 package com.zhuandian.demo;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
@@ -31,24 +32,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        StatusBarCompat.compat(this, Color.RED);
         setContentView(R.layout.activity_main);
-        ImmersionBar.with(this)
-                .navigationBarColor(R.color.colorPrimary)
+        ImmersionBar.with(this)                             //实现沉浸式
+                .navigationBarColor(R.color.one)
                 .init(); //初始化，默认透明状态栏和黑色导航栏
-        ButterKnife.bind(this);
-        initView();
+       ButterKnife.bind(this);
+       initView();
     }
 
 
     private void initView() {
         toolBar.setTitle("新闻");
-        titles.add("页面1");
-        titles.add("页面2");
-        titles.add("页面3");
-        fragmentList.add(new CommonFragment().getInstance("pager one",true));
-        fragmentList.add(new CommonFragment().getInstance("pager two",false));
-        fragmentList.add(new CommonFragment().getInstance("pager three",false));
+        titles.add("头条");
+        titles.add("精选");
+        titles.add("娱乐");
+      //  fragmentList.add(new CommonFragment().getInstance("pager one",true,true));
+        fragmentList.add(new CommonFragment().getInstance("pager one",false,true));
+        fragmentList.add(new CommonFragment().getInstance("pager two",false,false));
+        fragmentList.add(new CommonFragment().getInstance("pager three",false,false));
         pagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragmentList, titles);
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -70,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 } else if (state == State.COLLAPSED) {
                     //折叠状态
                     if (titles.size() < 5) {
-                        titles.add("页面4");
-                        titles.add("页面5");
-                        fragmentList.add(new CommonFragment().getInstance("4",false));
-                        fragmentList.add(new CommonFragment().getInstance("5",false));
+                        titles.add("游戏");
+                        titles.add("历史");
+                        fragmentList.add(new CommonFragment().getInstance("4",false,false));
+                        fragmentList.add(new CommonFragment().getInstance("5",false,false));
                         pagerAdapter.notifyDataSetChanged();
                     }
 

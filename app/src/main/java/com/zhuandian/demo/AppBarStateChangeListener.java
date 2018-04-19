@@ -2,11 +2,6 @@ package com.zhuandian.demo;
 
 import android.support.design.widget.AppBarLayout;
 
-/**
- * desc :
- * author：xiedong
- * data：2018/4/16
- */
 
 public abstract class AppBarStateChangeListener implements AppBarLayout.OnOffsetChangedListener {
 
@@ -14,6 +9,7 @@ public abstract class AppBarStateChangeListener implements AppBarLayout.OnOffset
         EXPANDED,
         COLLAPSED,
         IDLE
+
     }
 
     private State mCurrentState = State.IDLE;

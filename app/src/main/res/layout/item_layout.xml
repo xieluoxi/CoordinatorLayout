@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
-    android:gravity="center">
-
+    android:layout_height="142dp">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#e3e1e6" />
     <TextView
         android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="45dp"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        android:text="哈哈哈哈哈哈哈哈hhhh哈哈" />
+
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_name"
+        android:layout_marginBottom="15dp"
+        android:text="网易原创"
+        android:textColor="#333333"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_name"
+        android:layout_alignRight="@+id/tv_name"
+        android:layout_alignTop="@+id/textView5"
+        android:text="2018-4-18"
+        android:textColor="#333333"
+        android:textSize="17sp"/>
+
+
+</RelativeLayout>
